@@ -1,5 +1,6 @@
 let testButton = document.getElementById("test-button");
 let primeButton = document.getElementById("prime-button");
+let fileInput = document.getElementById("file-input");
 
 let mainContainer = document.getElementById("main-container");
 let timePicker = document.getElementById("time-picker");
@@ -33,12 +34,13 @@ function checkTime(){
     minutes = now.getMinutes();
     let minutesFormatted = (minutes>10 ? minutes : `0${minutes}`)
     time = `${hours}:${minutesFormatted}`
+    let hoursFormatted = (hours>10 ? hours : `0${hours}`)
+    time = `${hoursFormatted}:${minutesFormatted}`
     console.log(`current time: ${time}, looking for: ${timeSelected}`)
     if(time == timeSelected) StartSoftWake();
 }
 
 function ChangeMusic(){
-    //TODO
 }
 
 function playAudio() {
@@ -62,3 +64,4 @@ function fadeOut(element) {
         }
     }, 10);
  }
+

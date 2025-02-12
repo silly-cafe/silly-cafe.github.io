@@ -61,6 +61,27 @@ body{
     transition: box-shadow 0.3s;
     border-style: solid;
     border-color: #a1b5d856;
+    display: inline;
+    white-space: nowrap;
+}
+
+.input-shadowy:focus
+{
+    box-shadow: -3px -3px 3px 3px #000000bb, 3px 3px 3px 3px #232f42bb;
+    transition: box-shadow 0.15s;
+}
+
+.input-shadowy
+{
+    box-shadow: 3px 3px 3px 3px #000000bb, -3px -3px 3px 3px #232f42bb;
+    border-radius: 30px;
+    padding: 15px 20px;
+    margin-top: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
+    transition: box-shadow 0.3s;
+    border-style: solid;
+    border-color: #a1b5d856;
     display: inline
 }
 
@@ -105,11 +126,7 @@ input {
     color-scheme: dark;
 }
 input:focus {outline:none!important;}
-
-
-    
-
-
+  
 @-webkit-keyframes light-up {
     0% {background-color: #10063d;}
     100% {background-color:white;}
@@ -200,3 +217,67 @@ input:focus {outline:none!important;}
     font-weight: 700;
     font-style: italic;
   }
+
+
+/*POPUP - I stole it from w3schools */
+
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+#file-input{
+  min-width: 30vw !important;
+}

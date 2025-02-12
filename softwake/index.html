@@ -22,12 +22,17 @@
             <input type="time" id="time-picker" class="time-input font-bold" >
         </div>
         <div id="buttons" class="center" style="margin-top: 10vh;">
-            <div id="test-button" onclick="ChangeMusic()" class="button-shadowy center font-regular">Pick an MP3 to be played (WIP)</div>
             <div id="test-button" onclick="StartSoftWake()" class="button-shadowy center font-regular">Test the alarm</div>
             <div id="prime-button" onclick="PrimeTimer()" class="button-shadowy center font-regular">Prime the time activation</div>
             <br class="clearBoth" />
+          </div> <br>
+          <div id="buttons2" class="center">
 
-        </div>
+            <input id="file-input" placeholder="https://www.youtube.com/watch?v=VzZlrrCnAvU" class="input-shadowy"type="text"/>
+            <div id="test-button" onclick="ChangeMusic()" class="button-shadowy center font-regular popup">Use YT music (WIP)
+            </div>
+          </div>
+
     </div>
     <audio id="wake-mix">
         <source src="mix.mp3" type="audio/mpeg">
