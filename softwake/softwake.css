@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/*
+margin and padding reset for every element, used it to quickly get rid of default body margin, might suffer consequences later tho lol
+*/
+
+/*    -webkit-animation:light-up 10s forwards;*/
+
+.anim-bg-wake{
+    -webkit-animation:light-up 10s forwards;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#main-container{
+    width: 100vw;
+    height: 100vw;
+    background-color: #10063d;
+    color: rgb(235, 235, 235);
+
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.center{
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#title{
+    font-size: 5vw;
+    padding-top: 10vh;
+}
+
+#subtitle{
+    font-size: 1vw;
+    text-align: center;
+}
+
+.button-shadowy:active 
+{
+    box-shadow: -3px -3px 3px 3px #000000bb, 3px 3px 3px 3px #232f42bb;
+    transition: box-shadow 0.15s;
+}
+
+.button-shadowy
+{
+    box-shadow: 3px 3px 3px 3px #000000bb, -3px -3px 3px 3px #232f42bb;
+    border-radius: 30px;
+    padding: 15px 50px;
+    margin-top: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
+    transition: box-shadow 0.3s;
+    border-style: solid;
+    border-color: #a1b5d856;
+    display: inline
+}
+
+.circle-button-shadowy
+{
+    box-shadow: -3px -3px 3px 3px #000000bb, 3px 3px 3px 3px #232f42bb;
+    transition: box-shadow 0.15s;
+}
+
+.circle-button-shadowy
+{
+    box-shadow: 3px 3px 3px 3px #000000bb, -3px -3px 3px 3px #232f42bb;
+    border-radius: 30px;
+    padding: 15px 20px;
+    margin-top: 25px;
+    transition: box-shadow 0.3s;
+    border-style: solid;
+    border-color: #a1b5d856;
+}
+
+.clearBoth { clear:both; }
+
+.time-input{
+    padding-top: 10vh;
+    background-color: #10063d;
+    border: 0;
+    color: white;
+    font-size: 5vw;
+}
+
+.time-input:hover{
+    padding-top: 10vh;
+    background-color: #10063d;
+    border: 0;
+    color: white;
+    font-size: 5vw;
+}
+
+input {
+    border:0;
+    outline:0;
+    color-scheme: dark;
+}
+input:focus {outline:none!important;}
+
+
+    
+
+
+@-webkit-keyframes light-up {
+    0% {background-color: #10063d;}
+    100% {background-color:white;}
+}
+
+
+/***FONTS***/
+.font-thin {
+    font-family: "IBM Plex Mono", serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .font-extralight {
+    font-family: "IBM Plex Mono", serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .font-light {
+    font-family: "IBM Plex Mono", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .font-regular {
+    font-family: "IBM Plex Mono", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .font-medium {
+    font-family: "IBM Plex Mono", serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .font-semibold {
+    font-family: "IBM Plex Mono", serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .font-bold {
+    font-family: "IBM Plex Mono", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .font-thin-italic {
+    font-family: "IBM Plex Mono", serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .font-extralight-italic {
+    font-family: "IBM Plex Mono", serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+  .font-light-italic {
+    font-family: "IBM Plex Mono", serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .font-regular-italic {
+    font-family: "IBM Plex Mono", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .font-medium-italic {
+    font-family: "IBM Plex Mono", serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .font-semibold-italic {
+    font-family: "IBM Plex Mono", serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .font-bold-italic {
+    font-family: "IBM Plex Mono", serif;
+    font-weight: 700;
+    font-style: italic;
+  }

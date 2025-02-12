@@ -14,10 +14,12 @@ body{
 {
     box-shadow: -3px -3px 3px 3px #ffffffbb, 3px 3px 3px 3px #b1b1b1bb;
     border-radius: 30px;
+    margin: 0 15px;
     padding: 15px 50px;
     transition: box-shadow 0.3s;
     border-style: solid;
     border-color: #a1b5d856;
+    text-decoration: none;
 }
 
 .font-regular {

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SoftWake</title>
+    <link rel="stylesheet" href="softwake.css">
+    
+  </head>
+  <body>
+    <div id="main-container">
+        <div id="title" class="center font-light">
+            <p>SoftWake</p>
+        </div>
+        <div id="subtitle" class="center font-thin">
+            <p>I came up with this so I could wake up easier in the morning</p>
+            <p>Turn on the speakers and pair this with a normal alarm on your phone</p>
+        </div>
+        </br>
+        <div class="center">
+            <input type="time" id="time-picker" class="time-input font-bold" >
+        </div>
+        <div id="buttons" class="center" style="margin-top: 10vh;">
+            <div id="test-button" onclick="ChangeMusic()" class="button-shadowy center font-regular">Pick an MP3 to be played (WIP)</div>
+            <div id="test-button" onclick="StartSoftWake()" class="button-shadowy center font-regular">Test the alarm</div>
+            <div id="prime-button" onclick="PrimeTimer()" class="button-shadowy center font-regular">Prime the time activation</div>
+            <br class="clearBoth" />
+
+        </div>
+    </div>
+    <audio id="wake-mix">
+        <source src="mix.mp3" type="audio/mpeg">
+    </audio>
+    <script src="softwake.js"></script>
+  </body>
+</html>
