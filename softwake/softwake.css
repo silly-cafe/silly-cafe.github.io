@@ -126,6 +126,10 @@ input {
     color-scheme: dark;
 }
 input:focus {outline:none!important;}
+
+#yt-player{
+  display: none;
+}
   
 @-webkit-keyframes light-up {
     0% {background-color: #10063d;}

@@ -1,6 +1,7 @@
 let testButton = document.getElementById("test-button");
 let primeButton = document.getElementById("prime-button");
-let fileInput = document.getElementById("file-input");
+let ytInput = document.getElementById("yt-input");
+let ytPlayer = document.getElementById("yt-player");
 
 let mainContainer = document.getElementById("main-container");
 let timePicker = document.getElementById("time-picker");
@@ -15,6 +16,10 @@ timePicker.addEventListener("input", () => {
 let hours;
 let minutes;
 let time;
+
+let url = new URL(window.location.href);
+let vidParam = url.searchParams.get('vid');
+ytPlayer.setAttribute("data-video", vidParam)
 
 function StartSoftWake(){
     fadeOut("main-container");
@@ -40,7 +45,34 @@ function checkTime(){
     if(time == timeSelected) StartSoftWake();
 }
 
+function youtube_parser(url){
+    let regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
+    let match = url.match(regExp);
+    return match[7];
+}
+
+function GetURLParameter(sParam){
+    let sPageURL = window.location.search.substring(1);
+    let sURLVariables = sPageURL.split('&');
+    for (let i = 0; i < sURLVariables.length; i++) 
+    {
+        let sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam) 
+        {
+            return sParameterName[1];
+        }
+    }
+}
+
 function ChangeMusic(){
+    //let player = document.getElementById("yt-player-placer");
+    let videoId = youtube_parser(ytInput.value);
+    url.searchParams.set('vid', videoId); 
+    window.location.href = url
+    //layer.setAttribute('data-video', videoId);
+    //player.innerHTML=`<div id=\"yt-player\" data-video=\"${videoId}\" data-autoplay=\"1\" data-loop=\"1\" class=\"youtube-audio\"></div>`;
+
+    //player.click();
 }
 
 function playAudio() {

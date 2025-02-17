@@ -28,7 +28,7 @@
           </div> <br>
           <div id="buttons2" class="center">
 
-            <input id="file-input" placeholder="https://www.youtube.com/watch?v=VzZlrrCnAvU" class="input-shadowy"type="text"/>
+            <input id="yt-input" placeholder="https://www.youtube.com/watch?v=VzZlrrCnAvU" class="input-shadowy"type="text"/>
             <div id="test-button" onclick="ChangeMusic()" class="button-shadowy center font-regular popup">Use YT music (WIP)
             </div>
           </div>
@@ -37,6 +37,9 @@
     <audio id="wake-mix">
         <source src="mix.mp3" type="audio/mpeg">
     </audio>
+    <div id="yt-player" data-video="" data-autoplay="1" data-loop="1" class="youtube-audio"></div>
     <script src="softwake.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="youtube.js"></script>
   </body>
 </html>
